@@ -1,7 +1,26 @@
-# Run `python main.py` in the terminal
+import math
+import random
+import time
+import pygame
+pygame.init()
 
-# Note: Python is lazy loaded so the first run will take a moment,
-# But after cached, subsequent loads are super fast! ⚡️
+WIDTH, HEIGHT = 800, 600
 
-import platform
-print(f"Hello Python v{platform.python_version()}!")
+WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Aim Trainer")
+
+
+def main():
+    run = True
+
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                break
+    pygame.quit()
+
+
+if __name__ == "__main__":
+    main()
